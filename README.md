@@ -33,7 +33,7 @@ Sebuah *backend service* yang tangguh dan terukur untuk aplikasi manajemen catat
 
 Proyek ini menggunakan pola arsitektur yang memisahkan *Routing* (Controller), *Business Logic* (Service), dan *Data Access* (Model) untuk menjaga kode tetap *Clean* dan *DRY (Don't Repeat Yourself)*.
 
-text
+```text
 ├── app/
 │   ├── config/          # Manajemen environment variables & logger
 │   ├── db/              # Konfigurasi koneksi SQLAlchemy & PostgreSQL
