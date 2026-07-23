@@ -99,10 +99,10 @@ Mulai server FastAPI menggunakan Uvicorn:
 📡 Daftar Endpoint API (API Endpoints)
 Secara garis besar, berikut adalah resource yang tersedia:
 
-Authentication: * POST /auth/register - Pendaftaran pengguna baru.
-POST /auth/login - Autentikasi dan pengeluaran token JWT (OAuth2 Flow).
-Users: * GET /users/ - Mengambil data profil pengguna berdasarkan ID.
-PUT /users/ - Memperbarui data pengguna, termasuk unggah profile_img & thumbnail.
+* **Authentication:** POST /auth/register - Pendaftaran pengguna baru.
+* **POST /auth/login** - Autentikasi dan pengeluaran token JWT (OAuth2 Flow).
+* **Users: * GET /users/** - Mengambil data profil pengguna berdasarkan ID.
+* **PUT /users/** - Memperbarui data pengguna, termasuk unggah profile_img & thumbnail.
 (Catatan: Endpoint untuk Notes dan Likes dirancang mengikuti pola yang sama pada tahap pengembangan selanjutnya).
 
 Dibuat dengan ❤️ oleh [Nama Anda/Mohamad Rafly Andreanto] - Terbuka untuk diskusi kolaborasi dan peluang pengembangan karir.
