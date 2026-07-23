@@ -33,67 +33,68 @@ Sebuah *backend service* yang tangguh dan terukur untuk aplikasi manajemen catat
 
 Proyek ini menggunakan pola arsitektur yang memisahkan *Routing* (Controller), *Business Logic* (Service), dan *Data Access* (Model) untuk menjaga kode tetap *Clean* dan *DRY (Don't Repeat Yourself)*.
 
-```text
-├── app/
-│   ├── config/          # Manajemen environment variables & logger
-│   ├── db/              # Konfigurasi koneksi SQLAlchemy & PostgreSQL
-│   ├── modules/         # Domain-Driven Modules
-│   │   ├── auth/        # Controller & Service untuk Autentikasi
-│   │   ├── like/        # Model relasi Likes
-│   │   ├── note/        # Logika manajemen catatan
-│   │   └── user/        # Profiling dan manajemen gambar pengguna
-│   └── __init__.py      # FastAPI App Factory & Lifespan handler
-├── docker-compose.yml   # Konfigurasi service PostgreSQL & pgAdmin
-├── main.py              # Entry point aplikasi (Uvicorn)
-└── requirements.txt
+    ```text
+    ├── app/
+    │   ├── config/          # Manajemen environment variables & logger
+    │   ├── db/              # Konfigurasi koneksi SQLAlchemy & PostgreSQL
+    │   ├── modules/         # Domain-Driven Modules
+    │   │   ├── auth/        # Controller & Service untuk Autentikasi
+    │   │   ├── like/        # Model relasi Likes
+    │   │   ├── note/        # Logika manajemen catatan
+    │   │   └── user/        # Profiling dan manajemen gambar pengguna
+    │   └── __init__.py      # FastAPI App Factory & Lifespan handler
+    ├── docker-compose.yml   # Konfigurasi service PostgreSQL & pgAdmin
+    ├── main.py              # Entry point aplikasi (Uvicorn)
+    └── requirements.txt
 
 🚀 Panduan Instalasi (Getting Started)
 1. Prasyarat (Prerequisites)
-
 Pastikan sistem Anda sudah terinstal:
-
-  Python 3.10+
-
-  Docker & Docker Compose
+Python 3.10+
+Docker & Docker Compose
 
 2. Clone Repositori
-git clone [https://github.com/username-anda/notes-app-backend.git](https://github.com/username-anda/notes-app-backend.git)
-cd notes-app-backend
+   ```
+    git clone [https://github.com/username-anda/notes-app-backend.git](https://github.com/username-anda/notes-app-backend.git)
+    cd notes-app-backend
 
 3. Konfigurasi Environment (Variabel Lingkungan)
-
 Buat file .env pada root directory dan sesuaikan dengan kredensial Anda
-# Database Config
-POSTGRES_USER=xxx xxx
-POSTGRES_PASSWORD=xxx xxx
-POSTGRES_DB=xxx xxx
-POSTGRES_HOST=xxx xxx
-POSTGRES_PORT=xxx xxx
-
-# pgAdmin Config (Opsional)
-PGADMIN_DEFAULT_EMAIL=xxx xxx
-PGADMIN_DEFAULT_PASSWORD=xxx xxx
-
-# JWT Token Config
-SECRECT_KEY=xxx xxx
-ALGORITHM=xxx xxx
-ACCESS_TOKEN_EXPIRE_HOURS=xx
+    ```
+    # Database Config
+    POSTGRES_USER=xxx xxx
+    POSTGRES_PASSWORD=xxx xxx
+    POSTGRES_DB=xxx xxx
+    POSTGRES_HOST=xxx xxx
+    POSTGRES_PORT=xxx xxx
+    
+    # pgAdmin Config (Opsional)
+    PGADMIN_DEFAULT_EMAIL=xxx xxx
+    PGADMIN_DEFAULT_PASSWORD=xxx xxx
+    
+    # JWT Token Config
+    SECRECT_KEY=xxx xxx
+    ALGORITHM=xxx xxx
+    ACCESS_TOKEN_EXPIRE_HOURS=xx
 
 4. Menjalankan Database dengan Docker
 Jalankan PostgreSQL dan pgAdmin menggunakan Docker Compose:
-docker-compose up -d
+    ```
+    docker-compose up -d
 
-5. Instalasi Dependensi Python
+6. Instalasi Dependensi Python
 Sangat disarankan menggunakan Virtual Environment (venv):
-python -m venv venv
-source venv/bin/activate  # (Untuk Linux/Mac)
-venv\Scripts\activate     # (Untuk Windows)
+   ```
+    python -m venv venv
+    source venv/bin/activate  # (Untuk Linux/Mac)
+    venv\Scripts\activate     # (Untuk Windows)
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 6. Menjalankan Aplikasi
 Mulai server FastAPI menggunakan Uvicorn:
-python main.py
+    ```
+    python main.py
 
 📡 Daftar Endpoint API (API Endpoints)
 Secara garis besar, berikut adalah resource yang tersedia:
